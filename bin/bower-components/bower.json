@@ -1,0 +1,17 @@
+{
+  "name": "bower-components",
+  "homepage": "https://github.com/sarbjeetkumar/GoProject",
+  "authors": [
+    "Sean <seaniemc001@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
