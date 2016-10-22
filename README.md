@@ -22,7 +22,7 @@ MiddleWare (API)
 
 Must be written in Go
 
-*Setting up Go Environment Windows command line*
+##Setting up Go Environment Windows command line
 ```
 **If you want to use unix commands in windows command-line**
 http://lifehacker.com/362316/use-unix-commands-in-windows-built-in-command-prompt
@@ -39,7 +39,7 @@ touch main.go - touch: is used to change the timestamp on a file. If the file sp
 Install IntelliJ IDEA. https://www.jetbrains.com/idea/download/
 *Set up Intellij for Go* - https://rootpd.com/2016/02/04/setting-up-intellij-idea-for-your-first-golang-project/
 ```
-*Setting up Go Environment Git Bash*
+##Setting up Go Environment Git Bash
 ```
 https://git-scm.com/downloads
 *Difference between Git Bash and Windows command-line*
