@@ -31,6 +31,7 @@ cd desktop - Change Directory
 mkdir src, mkdir pkg, mkdir bin, mkdir public - mkdir: will create a new directory. http://www.slackbook.org/html/file-commands-creation.html
 
 set GOPATH=location of project. Example set GOPATH=C:\Users\John Doe\Desktop\Project
+set GOBIN=location of project. Example set GOBIN=C:\Users\John Doe\Desktop\Project\bin
 **Notice windows uses backslashes**
 
 cd src - Change Directory
