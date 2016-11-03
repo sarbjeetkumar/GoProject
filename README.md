@@ -18,6 +18,18 @@ https://angularjs.org/
 JQuery
 https://jquery.com/
 
+##Setting up the front-end 
+Created a public folder, which holds all the HTML, Javascript and CSS.  
+Website template was taken from http://getbootstrap.com/, added to the project and adobted.  
+The package manager Bower was used to install any dependancies needed in the web development.   
+By using the following commaand    
+```linux
+$bower install angular/bootstrap/jquery  
+```
+The bower-componts folder in the public directory was created and the dependancies added.  
+The rquired links were then added to the html to include Angularjs, Bootstrap and Jquery.
+
+
 MiddleWare (API)
 
 Must be written in Go
