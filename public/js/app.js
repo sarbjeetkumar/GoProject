@@ -1,4 +1,4 @@
-var GoDropBox = angular.module('GoDropBox', [ngRoute]);
+var GoDropBox = angular.module('GoDropBox', ['ngRoute']);
 
 
 GoDropBox.config(function($routeProvider){
