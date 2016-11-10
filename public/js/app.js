@@ -4,7 +4,7 @@ var GoDropBox = angular.module('GoDropBox', ['ngRoute']);
 GoDropBox.config(function($routeProvider){
     $routeProvider.
            when('/',{
-                templateUrl: 'pages/login.html',
+                templateUrl: 'pages/dragAndDrop.html',
                 controller: 'homeController'
             })
         .when('/contact',{
