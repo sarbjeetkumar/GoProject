@@ -7,10 +7,14 @@ GoDropBox.config(function($routeProvider){
                 templateUrl: 'pages/dragAndDrop.html',
                 controller: 'homeController'
             })
-        .when('/contact',{
-            templateUrl: 'pages/register.html',
-            controller: 'homeController'
-        });
+            .when('/signin',{
+                        templateUrl: 'pages/login.html',
+                        controller: 'homeController'
+                    })
+            .when('/signup',{
+                templateUrl: 'pages/register.html',
+                controller: 'homeController'
+            });
 
 });
 
