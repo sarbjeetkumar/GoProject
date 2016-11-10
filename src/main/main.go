@@ -4,8 +4,8 @@ import (
 	"../github.com/go-martini/martini"
 	"../github.com/martini-contrib/render"
 	"../github.com/martini-contrib/binding"
-	"gopkg.in/mgo.v2"
-	//"gopkg.in/mgo.v2/bson"
+	"../gopkg.in/mgo.v2"
+	//"../gopkg.in/mgo.v2/bson"
 	"fmt"
 	"log"
 )
@@ -68,9 +68,7 @@ func main() {
 	m.Use(DB())
 
 	m.Post("/", binding.Form(Register{}), func(register Register, r render.Render, db *mgo.Database) {
-
 		if err := db.C("users").Insert(register); err != nil {
-
 			if mgo.IsDup(err) {
 				fmt.Printf("%s Already exsists ", register.Email)
 				// Is a duplicate key, but we don't know which one
