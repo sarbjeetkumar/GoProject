@@ -1,12 +1,4 @@
 
-
-Test image:
-
-![alt text][logo]
-
-[logo]: https://cloud.githubusercontent.com/assets/10633228/20218257/8ab4ef70-a81b-11e6-98cf-a83f4eff9dcb.jpg
-
-
 # GoProject
 4th Year Go Project
 
