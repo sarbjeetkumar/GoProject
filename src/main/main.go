@@ -8,6 +8,7 @@ import (
 	//"../gopkg.in/mgo.v2/bson"
 	"fmt"
 	"log"
+	//"net/http"
 )
 
 type Register struct {
@@ -20,7 +21,9 @@ type Register struct {
 }
 
 func DB() martini.Handler {
-	session, err := mgo.Dial("localhost:27017") // mongodb://localhost
+	//session, err := mgo.Dial("localhost:27017") // mongodb://localhost
+	session, err := mgo.Dial("mongodb://meanProject:JasonLiamSarabjeetSean1@51.141.15.147:27017") // mongodb://localhost
+
 	if err != nil {
 		panic(err)
 	}
@@ -67,9 +70,11 @@ func main() {
 
 	m.Use(DB())
 
+
 	m.Post("/", binding.Form(Register{}), func(register Register, r render.Render, db *mgo.Database) {
 		if err := db.C("users").Insert(register); err != nil {
 			if mgo.IsDup(err) {
+
 				fmt.Printf("%s Already exsists ", register.Email)
 				// Is a duplicate key, but we don't know which one
 			}
