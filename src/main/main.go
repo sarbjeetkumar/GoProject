@@ -6,7 +6,7 @@ import (
 	"../github.com/martini-contrib/binding"
 	"../gopkg.in/mgo.v2"
 	//"../gopkg.in/mgo.v2/bson"
-	"fmt"
+	//"fmt"
 	"log"
 	//"net/http"
 )
@@ -21,8 +21,8 @@ type Register struct {
 }
 
 func DB() martini.Handler {
-	//session, err := mgo.Dial("localhost:27017") // mongodb://localhost
-	session, err := mgo.Dial("mongodb://meanProject:JasonLiamSarabjeetSean1@51.141.15.147:27017") // mongodb://localhost
+	session, err := mgo.Dial("localhost:27017") // connect to mongo localhost
+	//session, err := mgo.Dial("mongodb://51.141.9.220:27017") // connect to mongo on azure
 
 	if err != nil {
 		panic(err)
@@ -66,18 +66,19 @@ func main() {
 
 	m.Use(render.Renderer(render.Options {
 		Directory: "public/pages",
+		Layout: "layout",
 	}))
 
 	m.Use(DB())
 
-
 	m.Post("/", binding.Form(Register{}), func(register Register, r render.Render, db *mgo.Database) {
 		if err := db.C("users").Insert(register); err != nil {
+			/*
 			if mgo.IsDup(err) {
 
-				fmt.Printf("%s Already exsists ", register.Email)
-				// Is a duplicate key, but we don't know which one
-			}
+
+			}*/
+
 		}
 
 	})
