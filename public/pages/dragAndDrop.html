@@ -5,12 +5,15 @@
 
           <!-- Standar Form -->
           <h4>Select files from your computer</h4>
-          <form action="" method="post" enctype="multipart/form-data" id="js-upload-form">
+          <form action="/upload" method="post" enctype="multipart/form-data">
             <div class="form-inline">
               <div class="form-group">
-                <input type="file" name="files[]" id="js-upload-files" multiple>
+
+                <input type="file" name="uploadfile" />
+                <input type="hidden" name="token" value="{{.}}"/>
+
               </div>
-              <button type="submit" class="btn btn-sm btn-primary" id="js-upload-submit">Upload files</button>
+              <input type="submit" class="btn btn-sm btn-primary" value="upload">
             </div>
           </form>
 
