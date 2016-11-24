@@ -1,5 +1,6 @@
 <div class="container main-content">
-    <form action="/" method="POST">
+    <form id="register-form" j-Validate action="/" method="POST">
+        <br /><br />
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text"
@@ -10,6 +11,7 @@
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email"
+                   placeholder="Email address"
                    class="form-control"
                    name="email"
                    id="email">
@@ -22,11 +24,17 @@
                    id="username">
         </div>
         <div class="form-group">
-            <label for="email">Password</label>
+            <label for="password">Password</label>
             <input type="password"
                    class="form-control"
                    name="password"
                    id="password">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password"
+                   class="form-control"
+                   name="password2">
         </div>
         <div class="form-group">
             <label for="age">Age</label>
