@@ -96,7 +96,7 @@ GoDropBox.config(function($routeProvider){
             .when('/signup',{
                 templateUrl: 'pages/register.html',
                 controller: 'loginController'
-<<<<<<< HEAD
+
            })
              .when('/home',{
                         templateUrl: 'pages/dragAndDrop.html',
@@ -104,16 +104,9 @@ GoDropBox.config(function($routeProvider){
                     });
 
 
-=======
-            })
-
-            .when('/home',{
-                templateUrl: 'pages/dragAndDrop.html',
-                controller: 'homeController'
-            });
 
 
->>>>>>> 36f434ed15d7ec500331956931e25ca647f73274
+
 });
 
 //main page controller
