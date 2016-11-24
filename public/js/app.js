@@ -14,6 +14,10 @@ GoDropBox.config(function($routeProvider){
             .when('/signup',{
                 templateUrl: 'pages/register.html',
                 controller: 'homeController'
+            })
+            .when('/about',{
+                templateUrl: 'pages/about.html',
+                controller: 'homeController'
             });
 
 });
