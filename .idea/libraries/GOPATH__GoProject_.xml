@@ -2,12 +2,12 @@
   <library name="GOPATH &lt;GoProject&gt;">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../test/src/main" />
-      <root url="file://$PROJECT_DIR$/../../test/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../test/src/goji.io" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../test/src/main" />
-      <root url="file://$PROJECT_DIR$/../../test/src/gopkg.in" />
+      <root url="file://$PROJECT_DIR$/../../test/src/goji.io" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />
