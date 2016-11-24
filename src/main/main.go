@@ -152,9 +152,13 @@ func main() {
 	m := martini.Classic()
 
 	m.Use(render.Renderer(render.Options {
+<<<<<<< HEAD
 		Directory: "public/pages",
 		Delims: render.Delims{"{[{", "}]}"},
 		//Layout: "layout",
+=======
+		Directory: "public/",
+>>>>>>> 72d4219cb8e66d2c5abc8466ba35072c6aa003d4
 	}))
 
 	m.Use(DB())
