@@ -9,13 +9,13 @@ GoDropBox.config(function($routeProvider){
             })
             .when('/signin',{
                         templateUrl: 'pages/login.html',
-                        controller: 'homeController'
+                        controller: 'loginController'
                     })
             .when('/signup',{
                 templateUrl: 'pages/register.html',
-                controller: 'homeController'
-            });
-
+                controller: 'loginController'
+            })
+           
 });
 
 //main page controller

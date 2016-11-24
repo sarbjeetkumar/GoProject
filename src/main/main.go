@@ -62,7 +62,7 @@ func main() {
 	m := martini.Classic()
 
 	m.Use(render.Renderer(render.Options {
-		Directory: "public/pages",
+		Directory: "public/",
 	}))
 
 	m.Use(DB())
