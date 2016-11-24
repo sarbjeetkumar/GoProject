@@ -20,11 +20,11 @@ Directive is returned after ng-view renders
             .closest('.form-group')
             .addClass('has-error')
         },
-          unhighlight: function(element){
-                    $(element)
-                    .closest('.form-group')
-                    .removeClass('has-error')
-                }
+        unhighlight: function(element){
+            $(element)
+            .closest('.form-group')
+            .removeClass('has-error')
+        }
     })
 
   return {
@@ -34,42 +34,42 @@ Directive is returned after ng-view renders
     /*
     Validation is modified from tutorial - https://www.youtube.com/watch?v=xNSQ3i-BWMo
     */
-            rules: {
-                name:{
-                    required: true
-                },
-                email: {
-                    required:true,
-                    email:true
-                },
-                username: {
-                    required: true
-                },
-                password: {
-                    required:true,
-                    pattern:true
-                },
-                password2:{
-                    required:true,
-                    equalTo:"#password"
-                },
-                age: {
-                    required: true
-                },
-                sex: {
-                    required: true
-                }
+    rules: {
+        name:{
+            required: true
+        },
+        email: {
+            required:true,
+            email:true
+        },
+        username: {
+            required: true
+        },
+        password: {
+            required:true,
+            pattern:true
+        },
+        password2:{
+            required:true,
+            equalTo:"#password"
+        },
+        age: {
+            required: true
+        },
+        sex: {
+            required: true
+        }
+    },
+        messages:{
+            email:{
+                required: 'Please enter an email address.',
+                email: 'Please enter a valid email address.'
             },
-            messages:{
-                email:{
-                    required: 'Please enter an email address.',
-                    email: 'Please enter a valid email address.'
-                },
-                password2:{
-                    required: 'Please enter password.',
-                    equalTo: 'passwords do not match'
-                }
+            password2:{
+                required: 'Please enter password.',
+                equalTo: 'passwords do not match'
             }
+        }
       });
 
       scope.$on('$destroy', function () {
@@ -86,7 +86,7 @@ GoDropBox.config(function($routeProvider){
                 //templateUrl: 'pages/layout.tmpl',
                 //templateUrl: 'pages/user.tmpl',
                 //templateUrl: 'pages/upload.gtpl',
-                templateUrl: 'pages/dragAndDrop.html',
+                templateUrl: 'pages/about.html',
                 controller: 'homeController'
             })
             .when('/signin',{
@@ -96,24 +96,13 @@ GoDropBox.config(function($routeProvider){
             .when('/signup',{
                 templateUrl: 'pages/register.html',
                 controller: 'loginController'
-<<<<<<< HEAD
            })
-             .when('/home',{
-                        templateUrl: 'pages/dragAndDrop.html',
-                        controller: 'homeController'
-                    });
-
-
-=======
-            })
 
             .when('/home',{
                 templateUrl: 'pages/dragAndDrop.html',
                 controller: 'homeController'
-            });
+            })
 
-
->>>>>>> 36f434ed15d7ec500331956931e25ca647f73274
 });
 
 //main page controller
@@ -122,6 +111,6 @@ GoDropBox.controller('homeController', ['$scope', function($scope){
 }]);
 
 GoDropBox.controller('loginController', ['$scope', function($scope){
-
+    console.log($scope);
 }]);
 
