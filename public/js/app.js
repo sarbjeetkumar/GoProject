@@ -71,41 +71,32 @@ Directive is returned after ng-view renders
                 }
             }
       });
-
-      scope.$on('$destroy', function () {
-        // Perform cleanup.
-        // (Not familiar with the plugin so don't know what should to be done)
-      });
     }
   }
 });
 
 GoDropBox.config(function($routeProvider){
-    $routeProvider.
-           when('/',{
+    $routeProvider
+           .when('/',{
                 //templateUrl: 'pages/layout.tmpl',
                 //templateUrl: 'pages/user.tmpl',
                 //templateUrl: 'pages/upload.gtpl',
                 templateUrl: 'pages/dragAndDrop.html',
                 controller: 'homeController'
             })
-            .when('/signin',{
+           .when('/signin',{
                         templateUrl: 'pages/login.html',
                         controller: 'loginController'
             })
-            .when('/signup',{
+           .when('/signup',{
                 templateUrl: 'pages/register.html',
                 controller: 'loginController'
 
            })
-             .when('/home',{
+           .when('/home',{
                         templateUrl: 'pages/dragAndDrop.html',
                         controller: 'homeController'
-                    });
-
-
-
-
+           });
 
 });
 
