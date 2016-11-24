@@ -153,6 +153,8 @@ func main() {
 
 	m.Use(render.Renderer(render.Options {
 		Directory: "public/pages",
+		Delims: render.Delims{"{[{", "}]}"},
+		//Layout: "layout",
 	}))
 
 	m.Use(DB())
