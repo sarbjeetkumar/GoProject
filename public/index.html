@@ -27,6 +27,10 @@
 
   <!-- Custom styles for this template -->
   <link rel="stylesheet" href="css/style.css" >
+    
+   <!-- Stylesheet for popup message -->  
+   <link rel="stylesheet" href="css/popup.css" >
+      
 
 
 </head>
@@ -78,6 +82,36 @@
 <script src="js/app.js"></script>
 
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    
+     <!-- ============popup modal=====================-->
+      
+      <!-- Taken and adapted from: http://www.jqueryscript.net/lightbox/jQuery-Plugin-To-Show-A-Popup-Only-Once-Per-Visitor-First-Visit-Popup.html -->
+      
+       <p><a id="show-message">SHOW MESSAGE AGAIN</a></p> <!--REMOVE WHEN FINISHED POPUP MESSAGE!! -->
+      <div id="my-welcome-message">
+          
+          <img class="welcomePic" src="img/GoBoxWelcome.png" />
+          <div id="welcomeText">
+            <h2>Welcome to Gobox!</h2>
+            <h4>File storage on the go</h4>
+          </div>
+      </div>
+      
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+      <script src="js/jquery.firstVisitPopup.js"></script> 
+      
+      <script>
+			$(function () {
+				$('#my-welcome-message').firstVisitPopup({
+					cookieName : 'homepage',
+					showAgainSelector: '#show-message' //REMOVE WHEN FINISHED POPUP MESSAGE!!
+				});
+			});
+      </script>
+            
+      <!-- ============end of popup modal=====================-->
+    
 
   </body>
 </html>

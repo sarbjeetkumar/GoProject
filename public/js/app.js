@@ -96,7 +96,11 @@ GoDropBox.config(function($routeProvider){
            .when('/home',{
                         templateUrl: 'pages/dragAndDrop.html',
                         controller: 'homeController'
-           });
+           })
+          .when('/about',{
+                templateUrl: 'pages/about.html',
+                controller: 'aboutController'
+            });
 
 });
 
@@ -106,6 +110,11 @@ GoDropBox.controller('homeController', ['$scope', function($scope){
 }]);
 
 GoDropBox.controller('loginController', ['$scope', function($scope){
+
+}]);
+
+
+GoDropBox.controller('aboutController', ['$scope', function($scope){
 
 }]);
 
