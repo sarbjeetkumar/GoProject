@@ -89,11 +89,14 @@ GoDropBox.config(function($routeProvider){
                 templateUrl: 'pages/register.html',
                 controller: 'loginController'
            })
-
+          .when('/about',{
+                templateUrl: 'pages/about.html',
+                controller: 'aboutController'
+            })
            .when('/home',{
                 templateUrl: 'pages/dragAndDrop.html',
                 controller: 'homeController'
-           })
+           });
 });
 
 //main page controller
@@ -103,5 +106,10 @@ GoDropBox.controller('homeController', ['$scope', function($scope){
 
 GoDropBox.controller('loginController', ['$scope', function($scope){
     console.log($scope);
+}]);
+
+
+GoDropBox.controller('aboutController', ['$scope', function($scope){
+
 }]);
 
