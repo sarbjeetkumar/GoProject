@@ -44,3 +44,10 @@ div.aboutPic{
    padding:0; 
 }
 
+P.aboutText {
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+
