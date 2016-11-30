@@ -13,6 +13,11 @@ Front end
 Bootstrap
 http://getbootstrap.com/
 
+We used bootstrap because: 
+
+- Speed development 
+- Responsiveness
+
 AngularJS
 https://angularjs.org/
 
