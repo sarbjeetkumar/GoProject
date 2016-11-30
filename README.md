@@ -21,6 +21,11 @@ We used bootstrap because:
 AngularJS
 https://angularjs.org/
 
+- REST Easy.
+- MVVM to the Rescue
+- Data Binding and Dependency Injection
+- Makes HTML your Template
+
 JQuery
 https://jquery.com/
 
