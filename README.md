@@ -94,12 +94,12 @@ Backend(Database)
 
 https://www.mongodb.com/
 ```
-**We decide to use MongoDB because its a doucument based data base and save data in Json structure . Can query database through MongoDB 
+We decide to use MongoDB because its a doucument based data base and save data in Json structure . Can query database through MongoDB 
 query language , MongoDB uses dynamic schemas, meaning that you can create records without first defining the structure, such as the fields or the types of their values.
 
 quick guide how to install MongoDB on Windows :-
 
-*https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 
 
 
@@ -113,7 +113,7 @@ Martini
 ------
 
 ```
-**Martini is framwork which is was created for go Language .
+Martini is framwork which is was created for go Language .
 
 How to install Martini through command promt ....#
 
@@ -121,7 +121,7 @@ First install the Martini folder in project folder .
 
 And type this command in your command promt and Martini will install itself.
 
-*
+
 
 ```
 
