@@ -29,6 +29,8 @@ https://angularjs.org/
 JQuery
 https://jquery.com/
 
+- we use Jquery because we want to make a single page application and we did not want page to refresh but we want jQuery to work in the background . 
+
 ##Setting up the front-end 
 Created a public folder, which holds all the HTML, Javascript and CSS.  
 Website template was taken from http://getbootstrap.com/, added to the project and adobted.  
