@@ -1,4 +1,4 @@
-<div class="container main-content">
+<div class="container main-content" ng-controller="dragAndDropController">
     <form id="register-form" j-Validate action="/" method="POST">
         <br /><br />
         <div class="form-group">
@@ -55,7 +55,7 @@
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button ng-click="go('/fileupload') type="submit" class="btn btn-primary">Register</button>
         </div>
     </form>
 </div>

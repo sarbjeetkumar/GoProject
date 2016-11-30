@@ -1,4 +1,4 @@
-<div class="container main-content">
+<div class="container main-content" ng-controller="dragAndDropController">
     <form>
         <br /><br />
         <div class="form-group">
@@ -14,7 +14,7 @@
                    id="password">
         </div>
         <div class="form-group">
-            <button class="btn btn-primary">Login</button>
+            <button class="btn btn-primary" ng-click="go('/fileupload')">Login</button>
         </div>
     </form>
 </div>
