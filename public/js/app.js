@@ -75,10 +75,10 @@ Directive is returned after ng-view renders
   }
 });
 
-GoDropBox.config(function($routeProvider){
+GoDropBox.config(function($routeProvider, $locationProvider){
     $routeProvider
            .when('/',{
-                templateUrl: 'pages/dragAndDrop.html',
+                templateUrl: 'pages/landing.html',
                 controller: 'homeController'
             })
            .when('/signin',{
@@ -89,12 +89,16 @@ GoDropBox.config(function($routeProvider){
                 templateUrl: 'pages/register.html',
                 controller: 'loginController'
            })
-          .when('/about',{
+        /* .when('/about',{
                 templateUrl: 'pages/about.html',
                 controller: 'aboutController'
+            })*/
+            .when('/fileupload',{
+                templateUrl: 'pages/dragAndDrop.html',
+                controller: 'dragAndDropController'
             })
            .when('/home',{
-                templateUrl: 'pages/dragAndDrop.html',
+                templateUrl: 'pages/landing.html',
                 controller: 'homeController'
            });
 });
@@ -105,14 +109,27 @@ GoDropBox.controller('homeController', ['$scope', function($scope){
     console.log($scope);
 }]);
 
+<<<<<<< HEAD
 
 
 GoDropBox.controller('loginController', ['$scope', function($scope){
+=======
+GoDropBox.controller('loginController', ['$scope', '$location', function($scope, $location){
+>>>>>>> 0705d4c07911c3a8ca7d6f28b6af508abe3a414b
     console.log($scope);
+    //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
+    $scope.go = function ( path ) {
+        console.log(path);
+     $location.path( path );
+    };
 }]);
 
 
 GoDropBox.controller('aboutController', ['$scope', function($scope){
+
+}]);
+
+GoDropBox.controller('dragAndDropController', ['$scope', '$location', function($scope, $location){
 
 }]);
 

@@ -48,11 +48,11 @@ p { padding: 1em 1em; }
 
 
 img.welcomePic{
-   max-width:60%;
-   max-height:60%;
+   max-width:50%;
+   max-height:50%;
    display: block;
    margin-left: auto;
-   margin-right: auto 
+   margin-right: auto;
 }
 
 #welcomeText{
