@@ -21,14 +21,26 @@ type Register struct {
 	Sex 		string `form:"sex"`
 }
 
-func find() martini.Handler{
+
+type Login struct{
+	Username 	string `form:"username"`
+	Password 	string `form:"password"`
+}
+
+func GetAll(db *mgo.Database) []Login {
+	var loginlist []Login
+	db.C("username").Find(nil).All(&loginlist)
+	return loginlist
+}
+
+func find(w http.ResponseWriter) martini.Handler{
 	session, err := mgo.Dial("localhost:27017") // connect to mongo localhost
 	//session, err := mgo.Dial("mongodb://51.141.9.220:27017") // connect to mongo on azure
 
-	c := session.DB("GoDropBox").C("users")
+	c := session.DB("users").C("username")
 
 	var results []Register
-	err = c.Find(bson.M{"name": "sean"}).All(&results)
+	err = c.Find(bson.M{"name": "ray"}).All(&results)
 
 	if err != nil {
 		panic(err)
@@ -38,7 +50,7 @@ func find() martini.Handler{
 	return func(c martini.Context) {
 		s := session.Clone()
 		//Database GoDropBox
-		c.Map(s.DB("GoDropBox")) // local
+		c.Map(s.DB("users")) // local
 		defer s.Close()
 		c.Next()
 	}
@@ -58,7 +70,7 @@ func DB() martini.Handler {
 	return func(c martini.Context) {
 		s := session.Clone()
 		//Database GoDropBox
-		c.Map(s.DB("GoDropBox")) // local
+		c.Map(s.DB("users")) // local
 		defer s.Close()
 		c.Next()
 	}
@@ -70,11 +82,11 @@ func emailIndex(s *mgo.Session) {
 	session := s.Copy()
 	defer session.Close()
 
-	c := session.DB("GoDropBox").C("users")
+	c := session.DB("users").C("username")
 
 
 	index := mgo.Index{
-		Key: []string{"email"},
+		Key: []string{"username"},
 		Unique: true,
 		DropDups: true,
 		Background: true,
@@ -90,7 +102,7 @@ func All(db *mgo.Database) []Register {
 
 
 	var register []Register
-	db.C("users").Find(nil).All(&register)
+	db.C("username").Find(nil).All(&register)
 	return register
 }
 
@@ -147,6 +159,18 @@ func upload(w http.ResponseWriter, req *http.Request) {
 
 }
 
+func redirect(w http.ResponseWriter, r *http.Request) {
+
+	http.Redirect(w, r, "http://www.google.com", 301)
+}
+
+func Mongo() martini.Handler {
+	return func (c martini.Context ) {
+		fmt.Println("Someday I will be a MongoDB connection")
+		c.Next()
+	}
+}
+
 func main() {
 
 	m := martini.Classic()
@@ -161,7 +185,19 @@ func main() {
 
 	m.Use(DB())
 
+	fmt.Println("I am here")
+
 	m.Post("/upload", upload)
+	m.Post("/find", find)
+	m.Use( Mongo() )
+
+
+
+
+
+	m.Get("/All", func(r render.Render, db *mgo.Database) {
+		r.HTML(200, "list", All(db))
+	})
 
 	m.Get("user/:userID", func(r render.Render , p martini.Params) {
 
@@ -181,13 +217,28 @@ func main() {
 
 	})
 
+	m.Post("/login", binding.Form(Login{}), func(login Login, r render.Render, db *mgo.Database) {
+		var results []Register
+		if err := db.C("seanfitz").Find(bson.M{}).All(&results); err != nil {
+			fmt.Println("Results : ", results)
+		}
+		if err := db.C(login.Username).Find("password"); err != nil {
+			fmt.Println("Results : ", login.Password)
+		}
+	})
+
+	m.Get("/", func() string {
+		return "hello world" // HTTP 200 : "hello world"
+	})
+
+
 	m.Post("/", binding.Form(Register{}), func(register Register, r render.Render, db *mgo.Database) {
-		if err := db.C("users").Insert(register); err != nil {
+		if err := db.C(register.Username).Insert(register); err != nil {
 			if mgo.IsDup(err) {
 			}
 		}
 	})
 
 	//m.Run() uses the default port 3000
-	m.RunOnAddr(":8080")//specifies port 8080
+	m.RunOnAddr(":3000")//specifies port 8080
 }

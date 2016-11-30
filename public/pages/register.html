@@ -1,5 +1,8 @@
-<div class="container main-content">
+
+<div class="container main-content" ng-controller="dragAndDropController">
     <form id="register-form" j-Validate action="/" method="POST">
+    <div class="container main-content">
+    <form id="register-form" name="form" j-Validate >
         <br /><br />
         <div class="form-group">
             <label for="name">Name</label>
@@ -17,12 +20,13 @@
                    id="email">
         </div>
         <div class="form-group">
-            <label for="username">Username</label>
+            <label>Username</label>
             <input type="text"
                    class="form-control"
                    name="username"
-                   id="username">
+                   id="username_input">
         </div>
+        <div id ="feedback"></div>
         <div class="form-group">
             <label for="password">Password</label>
             <input type="password"
@@ -55,7 +59,8 @@
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button ng-click="go('/fileupload') type="submit" class="btn btn-primary">Register</button>
         </div>
     </form>
+
 </div>

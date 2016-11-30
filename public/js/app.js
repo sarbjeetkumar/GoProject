@@ -20,11 +20,11 @@ Directive is returned after ng-view renders
             .closest('.form-group')
             .addClass('has-error')
         },
-          unhighlight: function(element){
-                    $(element)
-                    .closest('.form-group')
-                    .removeClass('has-error')
-                }
+        unhighlight: function(element){
+            $(element)
+            .closest('.form-group')
+            .removeClass('has-error')
+        }
     })
 
   return {
@@ -34,74 +34,69 @@ Directive is returned after ng-view renders
     /*
     Validation is modified from tutorial - https://www.youtube.com/watch?v=xNSQ3i-BWMo
     */
-            rules: {
-                name:{
-                    required: true
-                },
-                email: {
-                    required:true,
-                    email:true
-                },
-                username: {
-                    required: true
-                },
-                password: {
-                    required:true,
-                    pattern:true
-                },
-                password2:{
-                    required:true,
-                    equalTo:"#password"
-                },
-                age: {
-                    required: true
-                },
-                sex: {
-                    required: true
-                }
+    rules: {
+        name:{
+            required: true
+        },
+        email: {
+            required:true,
+            email:true
+        },
+        username: {
+            required: true
+        },
+        password: {
+            required:true,
+            pattern:true
+        },
+        password2:{
+            required:true,
+            equalTo:"#password"
+        },
+        age: {
+            required: true
+        },
+        sex: {
+            required: true
+        }
+    },
+        messages:{
+            email:{
+                required: 'Please enter an email address.',
+                email: 'Please enter a valid email address.'
             },
-            messages:{
-                email:{
-                    required: 'Please enter an email address.',
-                    email: 'Please enter a valid email address.'
-                },
-                password2:{
-                    required: 'Please enter password.',
-                    equalTo: 'passwords do not match'
-                }
+            password2:{
+                required: 'Please enter password.',
+                equalTo: 'passwords do not match'
             }
+        }
       });
     }
   }
 });
 
-GoDropBox.config(function($routeProvider){
+GoDropBox.config(function($routeProvider, $locationProvider){
     $routeProvider
            .when('/',{
-                //templateUrl: 'pages/layout.tmpl',
-                //templateUrl: 'pages/user.tmpl',
-                //templateUrl: 'pages/upload.gtpl',
-                templateUrl: 'pages/dragAndDrop.html',
+                templateUrl: 'pages/landing.html',
                 controller: 'homeController'
             })
            .when('/signin',{
-                        templateUrl: 'pages/login.html',
-                        controller: 'loginController'
+                templateUrl: 'pages/login.html',
+                controller: 'loginController'
             })
            .when('/signup',{
                 templateUrl: 'pages/register.html',
-                controller: 'loginController'
-
+                controller: 'registerController'
            })
+            .when('/fileupload',{
+                templateUrl: 'pages/dragAndDrop.html',
+                controller: 'dragAndDropController'
+            })
            .when('/home',{
-                        templateUrl: 'pages/dragAndDrop.html',
-                        controller: 'homeController'
-           })
-          .when('/about',{
-                templateUrl: 'pages/about.html',
-                controller: 'aboutController'
-            });
-
+                templateUrl: 'pages/landing.html',
+                controller: 'homeController'
+           });
 });
 
 //main page controller
@@ -109,12 +104,33 @@ GoDropBox.controller('homeController', ['$scope', function($scope){
     console.log($scope);
 }]);
 
-GoDropBox.controller('loginController', ['$scope', function($scope){
 
+
+GoDropBox.controller('loginController', ['$scope', '$location', function($scope, $location){
+    console.log($scope);
+    //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
+    $scope.go = function ( path ) {
+        console.log(path);
+     $location.path( path );
+    };
+}]);
+
+GoDropBox.controller('registerController', ['$scope', '$location', function($scope, $location){
+    console.log($scope);
+    //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
+    $scope.go = function ( path ) {
+        console.log(path);
+     $location.path( path );
+    };
 }]);
 
 
-GoDropBox.controller('aboutController', ['$scope', function($scope){
-
+GoDropBox.controller('dragAndDropController', ['$scope', '$location', function($scope, $location){
+    console.log($scope);
+    //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
+    $scope.go = function ( path ) {
+        console.log(path);
+     $location.path( path );
+    };
 }]);
 

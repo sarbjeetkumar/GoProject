@@ -13,11 +13,23 @@ Front end
 Bootstrap
 http://getbootstrap.com/
 
+We used bootstrap because: 
+
+- Speed development 
+- Responsiveness
+
 AngularJS
 https://angularjs.org/
 
+- REST Easy.
+- MVVM to the Rescue
+- Data Binding and Dependency Injection
+- Makes HTML your Template
+
 JQuery
 https://jquery.com/
+
+- we use Jquery because we wanted to make a single page application and we did not want page to refresh but we want jQuery to work in the background . 
 
 ##Setting up the front-end 
 Created a public folder, which holds all the HTML, Javascript and CSS.  
@@ -63,7 +75,9 @@ cd desktop - Change Directory
 mkdir src, mkdir pkg, mkdir bin, mkdir public - mkdir: will create a new directory. http://www.slackbook.org/html/file-commands-creation.html
 
 export GOPATH=location of project. Example set GOPATH=C:/Users/John\ Doe/Desktop/Project
+
 export GOBIN=location of bin. Example set GOPATH=C:/Users/John\ Doe/Desktop/Project/bin
+
 **Notice Bash uses forward slashes and backslash to ignore the space **
 
 cd src - Change Directory
@@ -78,15 +92,39 @@ https://golang.org/
 
 Backend(Database)
 
-I think we all agreed to use MongoDB
 https://www.mongodb.com/
+```
+We decide to use MongoDB because its a doucument based data base and save data in Json structure . Can query database through MongoDB 
+query language , MongoDB uses dynamic schemas, meaning that you can create records without first defining the structure, such as the fields or the types of their values.
+
+quick guide how to install MongoDB on Windows :-
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+
+
+```
+
+
 
 Frameworks
 
-Gorilla
-http://www.gorillatoolkit.org/
+Martini 
+------
 
-Macaron
-https://go-macaron.com/docs
+```
+Martini is framwork which is was created for go Language .
 
-If i am missing anything please add in .
+How to install Martini through command promt ....#
+
+First install the Martini folder in project folder .
+
+And type this command in your command promt and Martini will install itself.
+
+"go get github.com/go-martini/martini"
+
+
+
+```
+
+
