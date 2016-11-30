@@ -92,7 +92,7 @@ https://golang.org/
 
 Backend(Database)
 
-https://www.mongodb.com/
+https://www.mongodb.com/(MOngoDB)
 ``
 We decide to use MongoDB because its a doucument based data base and save data in Json structure . Can query database through MongoDB 
 query language , MongoDB uses dynamic schemas, meaning that you can create records without first defining the structure, such as the fields or the types of their values.
@@ -117,8 +117,9 @@ Martini is framwork which is was created for go Language .
 
 How to install Martini through command promt ....#
 
-- First install the Martini folder in project folder .
-- And type this command in your command promt and Martini will install itself.
+First install the Martini folder in project folder .
+
+And type this command in your command promt and Martini will install itself.
 
 
 
