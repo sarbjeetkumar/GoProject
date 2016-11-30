@@ -87,12 +87,8 @@ GoDropBox.config(function($routeProvider, $locationProvider){
             })
            .when('/signup',{
                 templateUrl: 'pages/register.html',
-                controller: 'loginController'
+                controller: 'registerController'
            })
-        /* .when('/about',{
-                templateUrl: 'pages/about.html',
-                controller: 'aboutController'
-            })*/
             .when('/fileupload',{
                 templateUrl: 'pages/dragAndDrop.html',
                 controller: 'dragAndDropController'
@@ -120,12 +116,14 @@ GoDropBox.controller('loginController', ['$scope', '$location', function($scope,
 }]);
 
 GoDropBox.controller('registerController', ['$scope', '$location', function($scope, $location){
-    
+    console.log($scope);
+    //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
+    $scope.go = function ( path ) {
+        console.log(path);
+     $location.path( path );
+    };
 }]);
 
-/*GoDropBox.controller('aboutController', ['$scope', function($scope){
-
-}]);*/
 
 GoDropBox.controller('dragAndDropController', ['$scope', '$location', function($scope, $location){
     console.log($scope);
