@@ -121,6 +121,8 @@ First install the Martini folder in project folder .
 
 And type this command in your command promt and Martini will install itself.
 
+"go get github.com/go-martini/martini"
+
 
 
 ```
