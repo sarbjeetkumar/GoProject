@@ -33,12 +33,39 @@ p a {
 	color: #585858;
 }
 
+#link{
+    width: auto;
+}
 
+/*----------------------------BUTTONS---------------------------------*/
+
+.buttonBig {
+    background-color: #99ccff;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    /*float: left;*/
+}
+
+.buttonBig:hover {
+    background-color: #4da6ff;
+}
+
+/*
+#landing
+*/
 /*------------------------------ FOOTER ------------------------------*/
 #footer {
 	background-color: #eee;
 	border-top: 1px solid #d8d8d8;
 	padding: 30px 0;
+	position: fixed ;
+	bottom: 0;
 }
 #footer p {
 	font-size: 12px;
@@ -46,4 +73,20 @@ p a {
 	padding-left: 10px;
 }
 
+/*
+#names{
+   
+ right: 0;
+ bottom: 0;
+ position: fixed;
+   
+}
+
+#copyRight{
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+*/
 
