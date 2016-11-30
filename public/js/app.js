@@ -105,10 +105,17 @@ GoDropBox.config(function($routeProvider, $locationProvider){
 
 //main page controller
 GoDropBox.controller('homeController', ['$scope', function($scope){
+
     console.log($scope);
 }]);
 
+<<<<<<< HEAD
+
+
+GoDropBox.controller('loginController', ['$scope', function($scope){
+=======
 GoDropBox.controller('loginController', ['$scope', '$location', function($scope, $location){
+>>>>>>> 0705d4c07911c3a8ca7d6f28b6af508abe3a414b
     console.log($scope);
     //http://stackoverflow.com/questions/14201753/angular-js-how-when-to-use-ng-click-to-call-a-route
     $scope.go = function ( path ) {

@@ -1,14 +1,20 @@
+<<<<<<< HEAD
 <div class="container main-content" ng-controller="dragAndDropController">
     <form>
+=======
+<div class="container main-content">
+    <form action="/login" method="post">
+>>>>>>> acc0bd0aaaf66a4e8d9870f73b6ae122005c869c
         <br /><br />
         <div class="form-group">
-            <label for="email"> Email</label>
-            <input type="email"
+            <label for="username">Username</label>
+            <input type="text"
                    class="form-control"
-                   id="email">
+                   name="username"
+                   id="username">
         </div>
         <div class="form-group">
-            <label for="email"> Password</label>
+            <label for="password"> Password</label>
             <input type="password"
                    class="form-control"
                    id="password">
@@ -16,5 +22,9 @@
         <div class="form-group">
             <button class="btn btn-primary" ng-click="go('/fileupload')">Login</button>
         </div>
+
+
     </form>
+
+
 </div>

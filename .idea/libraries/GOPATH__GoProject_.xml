@@ -3,11 +3,13 @@
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../../test/src/main" />
       <root url="file://$PROJECT_DIR$/../../test/src/goji.io" />
+      <root url="file://$PROJECT_DIR$/../../test/src/github.com" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../test/src/main" />
       <root url="file://$PROJECT_DIR$/../../test/src/goji.io" />
+      <root url="file://$PROJECT_DIR$/../../test/src/github.com" />
     </SOURCES>
     <excluded>
       <root url="file://$PROJECT_DIR$" />
