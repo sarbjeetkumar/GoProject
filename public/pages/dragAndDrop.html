@@ -1,23 +1,21 @@
-<div class="container">
+<div class="container" id="div">
       <div class="panel panel-default">
         <div class="panel-heading"><strong>Upload Files</strong> <small>Bootstrap files upload</small></div>
         <div class="panel-body">
 
           <!-- Standar Form -->
           <h4>Select files from your computer</h4>
-          <form action="/upload" method="post" enctype="multipart/form-data">
+          <form enctype="multipart/form-data" method="post" action="/upload" id="js-upload-form" target="hidden-iframe" >
             <div class="form-inline">
               <div class="form-group">
 
-                <input type="file" name="uploadfile" />
-                <input type="hidden" name="token" value="{{.}}"/>
+                <input type="file" name="uploadfile" id="js-upload-files" multiple  />
+                  <input type="hidden" name="token"  value="{{.}}"/>
 
               </div>
-              <input type="submit" class="btn btn-sm btn-primary" id="submit" value="upload">
+              <input type="submit" class="btn btn-primary" id="js-upload-submit" value="upload">
             </div>
           </form>
-
-
 
           <!-- Drop Zone -->
           <h4>Or drag and drop files below</h4>
@@ -42,4 +40,30 @@
           </div>
         </div>
       </div>
+
+    <iframe name="hidden-iframe" style="display: none;"></iframe>
+
     </div> <!-- /container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

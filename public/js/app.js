@@ -78,7 +78,7 @@ Directive is returned after ng-view renders
 GoDropBox.config(function($routeProvider){
     $routeProvider
            .when('/',{
-                //templateUrl: 'pages/layout.tmpl',
+                //templateUrl: 'pages/list.tmpl',
                 //templateUrl: 'pages/user.tmpl',
                 //templateUrl: 'pages/upload.gtpl',
                 templateUrl: 'pages/dragAndDrop.html',
@@ -102,8 +102,11 @@ GoDropBox.config(function($routeProvider){
 
 //main page controller
 GoDropBox.controller('homeController', ['$scope', function($scope){
+
     console.log($scope);
 }]);
+
+
 
 GoDropBox.controller('loginController', ['$scope', function($scope){
 
