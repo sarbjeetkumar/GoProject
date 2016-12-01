@@ -1,66 +1,65 @@
-
 <div class="container main-content" ng-controller="dragAndDropController">
     <form id="register-form" j-Validate action="/" method="POST">
-    <div class="container main-content">
-    <form id="register-form" name="form" j-Validate >
-        <br /><br />
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text"
-                   class="form-control"
-                   name="name"
-                   id="name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email"
-                   placeholder="Email address"
-                   class="form-control"
-                   name="email"
-                   id="email">
-        </div>
-        <div class="form-group">
-            <label>Username</label>
-            <input type="text"
-                   class="form-control"
-                   name="username"
-                   id="username_input">
-        </div>
-        <div id ="feedback"></div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password"
-                   class="form-control"
-                   name="password"
-                   id="password">
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password"
-                   class="form-control"
-                   name="password2">
-        </div>
-        <div class="form-group">
-            <label for="age">Age</label>
-            <input type="number"
-                   class="form-control"
-                   name="age"
-                   id="age">
-        </div>
+        <div class="container main-content">
+        <form id="register-form" name="form" j-Validate >
+            <br /><br />
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text"
+                    class="form-control"
+                    name="name"
+                    id="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email"
+                    placeholder="Email address"
+                    class="form-control"
+                    name="email"
+                    id="email">
+            </div>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text"
+                    class="form-control"
+                    name="username"
+                    id="username_input">
+            </div>
+            <div id ="feedback"></div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                    class="form-control"
+                    name="password"
+                    id="password">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password"
+                    class="form-control"
+                    name="password2">
+            </div>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number"
+                    class="form-control"
+                    name="age"
+                    id="age">
+            </div>
 
-        <div class="form-group">
-            <label for="sex">Sex</label>
-            <select name="sex"
-                    id="sex"
-                    class="form-control">
-                <option value="">Please Choose</option>
-                <option value="male">Male</option>
-                <option value="female">female</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <button ng-click="go('/fileupload') type="submit" class="btn btn-primary">Register</button>
+            <div class="form-group">
+                <label for="sex">Sex</label>
+                <select name="sex"
+                        id="sex"
+                        class="form-control">
+                    <option value="">Please Choose</option>
+                    <option value="male">Male</option>
+                    <option value="female">female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary"  ng-click="go('/fileupload')" >Register</button>
+            </div>
         </div>
     </form>
-
 </div>
