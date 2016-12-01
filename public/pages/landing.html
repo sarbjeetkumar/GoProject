@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="css/popup.css" type="text/css">
     
 </head>
-<body >
-			
-        <div id="welcomeText" >
+<body>	
+	<div id="contents">
+        <div id="welcomeText">
             <h2>Welcome to GoDropBox!</h2>
             <img class="welcomePic" src="img/GoBoxAbout.png" />
             <div ng-controller="loginController">
-                <button ng-click="go('/signin')" class="buttonBig" id="landingSignIn"> Log in</button>
+                <button ng-click="go('/signin')" class="buttonBig" id="landingSignIn">Log in</button>
                 <p style="clear:both">
             </div>
+
             <div ng-controller="registerController">
                 <button ng-click="go('/signup')" class="buttonBig" id="landingsignUp">Sign up</button>
                 <p style="clear:both">
-            </div>
-        </div >
+            </div>   
+        </div>
+	</div>
 </body>
 </html>

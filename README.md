@@ -1,130 +1,59 @@
 
-# GoProject
-4th Year Go Project
+# GoDropBox
+A project for Emerging Technologies Year 4, at GMIT Galway.
 
+GoDropbox is a Web application used for the storing of files. The application can be accessed by downloading the project from GitHub. GoDropbox can be used to store and retrieve files, and allows you to add and delete files of any type. The application uses a MongoDb document database. As with all Nosql databases, Mongo puts no constraints on your data, which allows for excellent retrieval times. The front end of the application was developed using a combination of AngualrJs, Bootstrap, CSS and Jquery. Golang is the language of choice for middle ware, with Martini being the framework which was used in development.
 
+##Developer Guide. 
 
-Technologies 
+####Needed Software
+In order to use the application you must first have Go Lang (<https://golang.org/doc/install>) enviroment installed and set up on your pc. Follow the link provided for instructions.  
+Next you will need Mongodb installed and working, you can find instalation instructions at [the Mongodb website]( https://www.mongodb.com/download-center?jmp=nav#community). If you perfer to follow a video [Derek Banas on Youtube has an exellent installation guide](https://www.youtube.com/watch?v=-0X8mr6Q8Ew&list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY&index=1&t=172s)  
 
-
-Technologies For front end , Middle ware and Backend.
-Front end
-
-Bootstrap
-http://getbootstrap.com/
-
-We used bootstrap because: 
-
-- Speed development 
-- Responsiveness
-
-AngularJS
-https://angularjs.org/
-
-- REST Easy.
-- MVVM to the Rescue
-- Data Binding and Dependency Injection
-- Makes HTML your Template
-
-JQuery
-https://jquery.com/
-
-- we use Jquery because we wanted to make a single page application and we did not want page to refresh but we want jQuery to work in the background . 
-
-##Setting up the front-end 
-Created a public folder, which holds all the HTML, Javascript and CSS.  
-Website template was taken from http://getbootstrap.com/, added to the project and adobted.  
-The package manager Bower was used to install any dependancies needed in the web development.   
-By using the following commaand    
-```linux
-$bower install angular/bootstrap/jquery  
+####Git Clone
+Once the rquired software is installed, you then need to git clone the master branch of the GoProject repository or download a zip file copy.
 ```
-The bower-componts folder in the public directory was created and the dependancies added.  
-The rquired links were then added to the html to include Angularjs, Bootstrap and Jquery.
-
-
-MiddleWare (API)
-
-Must be written in Go
-
-##Setting up Go Environment Windows command line
+ git clone https://github.com/sarbjeetkumar/GoProject.git
 ```
-**If you want to use unix commands in windows command-line**
-http://lifehacker.com/362316/use-unix-commands-in-windows-built-in-command-prompt
-
-cd desktop - Change Directory
-mkdir src, mkdir pkg, mkdir bin, mkdir public - mkdir: will create a new directory. http://www.slackbook.org/html/file-commands-creation.html
-
-set GOPATH=location of project. Example set GOPATH=C:\Users\John Doe\Desktop\Project
-set GOBIN=location of project. Example set GOBIN=C:\Users\John Doe\Desktop\Project\bin
-**Notice windows uses backslashes**
-
-cd src - Change Directory
-touch main.go - touch: is used to change the timestamp on a file. If the file specified does not exist, touch will create a zero length file with the name specified. http://www.slackbook.org/html/file-commands-creation.html
-
-Install IntelliJ IDEA. https://www.jetbrains.com/idea/download/
-*Set up Intellij for Go* - https://rootpd.com/2016/02/04/setting-up-intellij-idea-for-your-first-golang-project/
+####Unzip Package
+When the application is on your machine, navigate to the src directory. 
 ```
-##Setting up Go Environment Git Bash
+In the src directory navigate to gopkg.in directory and unzip the mgo.v2.zip
+replace the existing mgo.v2 with the recently unziped.
 ```
-https://git-scm.com/downloads
-*Difference between Git Bash and Windows command-line*
-https://www.quora.com/What-is-difference-between-GIT-GUI-GIT-BASH-and-GIT-CMD
-
-cd desktop - Change Directory
-mkdir src, mkdir pkg, mkdir bin, mkdir public - mkdir: will create a new directory. http://www.slackbook.org/html/file-commands-creation.html
-
-export GOPATH=location of project. Example set GOPATH=C:/Users/John\ Doe/Desktop/Project
-
-export GOBIN=location of bin. Example set GOPATH=C:/Users/John\ Doe/Desktop/Project/bin
-
-**Notice Bash uses forward slashes and backslash to ignore the space **
-
-cd src - Change Directory
-touch main.go - touch: is used to change the timestamp on a file. If the file specified does not exist, touch will create a zero length file with the name specified. http://www.slackbook.org/html/file-commands-creation.html
-
-Install IntelliJ IDEA. https://www.jetbrains.com/idea/download/
-*Set up Intellij for Go* - https://rootpd.com/2016/02/04/setting-up-intellij-idea-for-your-first-golang-project/
+####Running Mongo
+To start the mongo database. Open up 2 seperate windows in your terminal comand prompt.  
+In terminal 1 type
+```
+mongod
+```
+In terminal 2 type
+```
+mongo
 ```
 
+####Set your go path:
 
-https://golang.org/
-
-Backend(Database)
-
-https://www.mongodb.com/
-```
-We decide to use MongoDB because its a doucument based data base and save data in Json structure . Can query database through MongoDB 
-query language , MongoDB uses dynamic schemas, meaning that you can create records without first defining the structure, such as the fields or the types of their values.
-
-quick guide how to install MongoDB on Windows :-
-
-https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
-
-
+For Linux Run:
 
 ```
-
-
-
-Frameworks
-
-Martini 
-------
+export GOPATH=$HOME/path/to/project
 
 ```
-Martini is framwork which is was created for go Language .
-
-How to install Martini through command promt ....#
-
-First install the Martini folder in project folder .
-
-And type this command in your command promt and Martini will install itself.
-
-"go get github.com/go-martini/martini"
-
-
-
+For Windows Run:
+```
+set GOPATH=c:\path\to\project
 ```
 
-
+####Run Go 
+Build the code 
+```
+go build
+```
+Run the application 
+```
+go buid main.go
+```
+##Wiki
+For extra information about the application please refer to the repository [Wiki](https://github.com/sarbjeetkumar/GoProject/wiki). The
+[Wiki](https://github.com/sarbjeetkumar/GoProject/wiki) contains lots of information regarding the [System Architecture](https://github.com/sarbjeetkumar/GoProject/wiki/3.-System-Architecture), the [Technolgies used](https://github.com/sarbjeetkumar/GoProject/wiki/2.-Technologies) throughout the project, the [Software Lifecycle](https://github.com/sarbjeetkumar/GoProject/wiki/4.-Software-Lifecycle) and [Project Management](https://github.com/sarbjeetkumar/GoProject/wiki/5.-Project-Management) tools used to aid development. 
