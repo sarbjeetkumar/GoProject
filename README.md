@@ -2,9 +2,12 @@
 # GoProject
 4th Year Go Project
 
+GoDropbox is a Web application used for the storing of files. The application can be accessed by downloading the project from GitHub. GoDropbox can be used to store and retrieve files, and allows you to add and delete files of any type. The application uses a MongoDb document database. As with all Nosql databases, Mongo puts no constraints on your data, which allows for excellent retrieval times. The front end of the application was developed using a combination of AngualrJs, Bootstrap, CSS and Jquery. Golang is the language of choice for middle ware, with Martini being the framework which was used in development.
 
+##User Guide. 
 
-Technologies 
+In order to use the application you must first have Go Language (<https://golang.org/doc/install>)  enviroment installed and set up on your pc. Follow the link provided for instructions.  
+Next you will need Mongodb installed and
 
 
 Technologies For front end , Middle ware and Backend.
