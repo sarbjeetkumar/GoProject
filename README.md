@@ -6,18 +6,22 @@ GoDropbox is a Web application used for the storing of files. The application ca
 
 ##User Guide. 
 
+####Needed Software
 In order to use the application you must first have Go Lang (<https://golang.org/doc/install>) enviroment installed and set up on your pc. Follow the link provided for instructions.  
 Next you will need Mongodb installed and working, you can find instalation instructions at [the Mongodb website]( https://www.mongodb.com/download-center?jmp=nav#community). If you perfer to follow a video [Derek Banas on Youtube has an exellent installation guide](https://www.youtube.com/watch?v=-0X8mr6Q8Ew&list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY&index=1&t=172s)  
 
+#####Git Clone
 Once the rquired software is installed, you then need to git clone the master branch of the GoProject repository or download a zip file copy.
 ```
  git clone https://github.com/sarbjeetkumar/GoProject.git
 ```
+####Unzip Package
 When the application is on your machine, navigate to the src directory. 
 ```
 In the src directory navigate to gopkg.in directory and unzip the mgo.v2.zip
 replace the existing mgo.v2 with the recently unziped.
 ```
+####Running Mongo
 To start the mongo database. Open up 2 seperate windows in your terminal comand prompt.  
 In terminal 1 type
 ```
@@ -26,6 +30,19 @@ mongod
 In terminal 2 type
 ```
 mongo
+```
+
+####Set your go path:
+
+For Linux Run:
+
+```
+export GOPATH=$HOME/path/to/project
+
+```
+For Windows Run:
+```
+set GOPATH=c:\path\to\project
 ```
 Technologies For front end , Middle ware and Backend.
 Front end
