@@ -54,6 +54,6 @@ Run the application
 ```
 go buid main.go
 ```
-
+##Wiki
 For extra information about the application please refer to the repository [Wiki](https://github.com/sarbjeetkumar/GoProject/wiki). The
-[Wiki](https://github.com/sarbjeetkumar/GoProject/wiki) contains lots of information regarding the [System Architecture](https://github.com/sarbjeetkumar/GoProject/wiki/3.-System-Architecture), the [Technolgies used](https://github.com/sarbjeetkumar/GoProject/wiki/2.-Technologies)
+[Wiki](https://github.com/sarbjeetkumar/GoProject/wiki) contains lots of information regarding the [System Architecture](https://github.com/sarbjeetkumar/GoProject/wiki/3.-System-Architecture), the [Technolgies used](https://github.com/sarbjeetkumar/GoProject/wiki/2.-Technologies) throughout the project, the [Software Lifecycle](https://github.com/sarbjeetkumar/GoProject/wiki/4.-Software-Lifecycle) and [Project Management](https://github.com/sarbjeetkumar/GoProject/wiki/5.-Project-Management) tools used to aid development. 
