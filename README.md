@@ -11,7 +11,7 @@ In order to use the application you must first have Go Lang (<https://golang.org
 Next you will need Mongodb installed and working, you can find instalation instructions at [the Mongodb website]( https://www.mongodb.com/download-center?jmp=nav#community). If you perfer to follow a video [Derek Banas on Youtube has an exellent installation guide](https://www.youtube.com/watch?v=-0X8mr6Q8Ew&list=PLGLfVvz_LVvRfdt8_W0dV311Xa8SayfCY&index=1&t=172s)  
 
 ####Git Clone
-Once the rquired software is installed, you then need to git clone the master branch of the GoProject repository or download a zip file copy.
+Once the required software is installed, you then need to git clone the master branch of the GoProject repository or download a zip file copy.
 ```
  git clone https://github.com/sarbjeetkumar/GoProject.git
 ```
